@@ -2,11 +2,7 @@
 
 Answer each question in 3 to 5 sentences. Be specific and honest about what actually happened while you worked. This is about your process, not trying to sound perfect.
 
-## 1. What was broken when you started?
-
-- What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
-  (for example: "the hints were backwards").
+## 1. What was broken when you started? - When I first ran the game, it did open normally but I've noticed some problems while testing it. One bug was that the hints were backwards. Like when it said the sercert number was 24 and I guessesd 50, the game told me to go higher instead of lower. Second I also did notice that starting a new did not clear the old guess I've made. Third, decimal guesses such as 24.9 were converted to 24 and accepted as the correct answer.  
 
 **Bug Reproduction Log**
 
@@ -14,9 +10,9 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+|Secret = 24, Guess 50|Game should say "Go LOWER" |Game said "Go Higher" | No console error |
+|Clicked "New Game" after making guesses| Previous guess history should reset | Old guesses remained in the history |No console error |
+|Secret = 24, Guess = 24.9 | Decimal input should be rejected as an invaild whole-number guess |Game converted 24.9 to 24 and said "Correcte!" |No console error |
 
 ---
 
