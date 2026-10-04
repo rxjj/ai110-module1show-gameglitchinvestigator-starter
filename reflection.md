@@ -16,20 +16,11 @@ Document at least 3 bugs you found. Add rows as needed.
 
 ---
 
-## 2. How did you use AI as a teammate?
-
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
-- Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-- Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count.
-
+## 2. How did you use AI as a teammate? I used ChatGPT and GitHub Copilot as AI tools while working on this project. ChatGPT helped me understand the bugs and guided me through testing, while Copilot helped me make changes directly to the code. One correct suggestion from Copilot was to move check_guess() into logic_utils.py and fix the backwards higher/lower hints. I verified this by running the game with a secret number of 68 and guessing 80, and the game correctly told me to go lower. I did not accept every AI result without checking it because I reviewed the changes and tested them myself before keeping them instead of assuming they were correct. Copilot also suggested updating parse_guess() so that an input with only spaces would be treated as an empty guess. I decided not to make that change because it wasn't related to the two main bugs I was trying to fix. I wanted to keep the changes simple and focus on fixing the backwards hints and the decimal input problem. I tested my fixes by running pytest and testing both problems myself in the game.
+ 
 ---
 
-## 3. Debugging and testing your fixes
-
-- How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
-- Did AI help you design or understand any tests? How?
+## 3. Debugging and testing your fixes? I decided a bug was really fixed by testing the game after making the changes instead of just assuming the code was correct. I ran pytest and all five tests passed. I also manually tested the game by guessing 80 when the secret number was 68, and it correctly told me to go lower. I tested the decimal bug by entering 68.9, and the game rejected it instead of converting it to 68. AI helped me understand what the tests were checking and helped create tests for the bugs I was fixing.
 
 ---
 
